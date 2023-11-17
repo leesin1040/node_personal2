@@ -36,7 +36,7 @@ router.post('/signup', async (req, res) => {
 		//이메일 중복 확인 - 확인
 		const existUser = await Users.findOne({ where: { email } });
 		if (existUser) {
-			return res.status(401).json({ message: '이미 사용중인 이메일입니다.' });
+			return res.status(409).json({ message: '이미 사용중인 이메일입니다.' });
 		}
 		//비밀번호 hash
 		const encryptPassword = encrypt(password);
