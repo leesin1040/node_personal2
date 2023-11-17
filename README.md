@@ -2,4 +2,8 @@
 
 ## ERD
 
-[ㄷㄸㄲㅇ](http://www.google.co.kr).
+https://www.erdcloud.com/p/qqzLxTmGy9piRGyK3
+
+## API명세
+
+https://docs.google.com/spreadsheets/d/1yVcT4Kos2eo4U_OKhSBMaGFz-EyNv_Fd160Ouxv33P8/edit?usp=sharing
