@@ -6,6 +6,7 @@ const encrypt = require('../encrypt.js');
 const { Op } = require('sequelize');
 const authMiddleware = require('../middlewares/auth-middleware.js');
 require('dotenv').config();
+const env = process.env;
 
 //⬇⬇⬇⬇⬇회원가입 - Post / signup
 router.post('/signup', async (req, res) => {
@@ -69,7 +70,7 @@ router.post('/login', async (req, res) => {
 			//토큰 부여 12시간
 			const token = jwt.sign(
 				{ email, name: existUser.name },
-				'nodejs-personal-assignment2',
+				env.JWT_SECREAT_KEY,
 				{ expiresIn: '12h' },
 			);
 			//cookie로 토큰 할당

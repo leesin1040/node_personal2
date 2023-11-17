@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { Users } = require('../models');
+require('dotenv').config();
+const env = process.env;
 
 module.exports = async (req, res, next) => {
 	const { Authorization } = req.cookies;
@@ -12,7 +14,7 @@ module.exports = async (req, res, next) => {
 	}
 	try {
 		// 복호화 및 검증
-		const { email } = jwt.verify(authToken, 'nodejs-personal-assignment2');
+		const { email } = jwt.verify(authToken, env.JWT_SECREAT_KEY);
 		const user = await Users.findOne({ where: { email } });
 		res.locals.user = user;
 		//데이터베이스의 사용자 정보를 가져와서 다음 미들웨어로 보내기
