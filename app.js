@@ -22,11 +22,11 @@ main();
 
 //기본 경로
 app.get('/', (req, res) => {
-  res.send('Node.js 숙련주차 개인과제에 접속되었습니다.');
+	res.send('Node.js 숙련주차 개인과제에 접속되었습니다.');
 });
 
 app.use('/api', [userRouter, productRouter]);
 
 app.listen(port, () => {
-  console.log(port, '포트로 서버가 열렸어요!');
+	console.log(port, '포트로 서버가 열렸어요!');
 });
