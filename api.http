@@ -8,7 +8,7 @@ POST http://localhost:3000/api/signup HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-  "email": "fortest336@naver.com",
+  "email": "testdddsdd@naver.com",
   "name": "테스트용",
   "password": "test123",
   "confirmPassword": "test123"
@@ -21,8 +21,13 @@ Content-Type: application/json; charset=utf-8
 
 {
   "email": "fortest456@naver.com",
-  "password": "test123"
+  "password": "test456"
 }
+
+###
+//내 정보 조회 -완료
+GET  http://localhost:3000/api/myinfo HTTP/1.1
+Content-Type: application/json; charset=utf-8
 
 ###
 //비밀번호 수정 -완료
@@ -32,12 +37,8 @@ Content-Type: application/json; charset=utf-8
 {
   "email": "fortest456@naver.com",
   "password": "test123",
-  "newPassword": "test123"
+  "newPassword": "test456"
 }
-###
-//내 정보 조회 -완료
-GET  http://localhost:3000/api/myinfo HTTP/1.1
-Content-Type: application/json; charset=utf-8
 
 ###
 //회원정보 삭제 - 완료
@@ -45,7 +46,7 @@ DELETE  http://localhost:3000/api/myinfo HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-  "email": "fortest456@naver.com",
+  "email": "fortestsad456@naver.com",
   "password": "test123"
 }
 
@@ -54,10 +55,6 @@ Content-Type: application/json; charset=utf-8
 POST  http://localhost:3000/api/logout HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
-{
-  "email": "fortest456@naver.com",
-  "password": "test123"
-}
 
 //⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ Products 관련
 ###
@@ -66,8 +63,8 @@ POST  http://localhost:3000/api/products HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-  "title": "유자",
-  "content": "상큼하고 맛있습니다"
+  "title": "감자",
+  "content": "담백하고 맛있습니다"
 }
 
 ###
@@ -82,7 +79,7 @@ Content-Type: application/json; charset=utf-8
 
 ###
 //상품 정보 수정
-PUT http://localhost:3000/api/products/17 HTTP/1.1
+PUT http://localhost:3000/api/products/20 HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {

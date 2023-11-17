@@ -6,9 +6,6 @@ const port = env.DB_PORT;
 const cookieParser = require('cookie-parser');
 const productRouter = require('./routers/products.router.js');
 const userRouter = require('./routers/user.router.js');
-const authMiddleware = require('./middlewares/auth-middleware.js');
-const { sequelize } = require('./models/index.js');
-const { Op } = require('sequelize');
 
 app.use(express.json());
 app.use(cookieParser());
