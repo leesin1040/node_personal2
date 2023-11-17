@@ -8,7 +8,7 @@ const authMiddleware = require('../middlewares/need-signin.middlware.js');
 require('dotenv').config();
 const env = process.env;
 
-//⬇⬇⬇⬇⬇회원가입 - Post / signup
+//⬇⬇⬇⬇회원가입 - Post / signup
 router.post('/signup', async (req, res) => {
 	try {
 		const { email, name, password, confirmPassword } = req.body;
