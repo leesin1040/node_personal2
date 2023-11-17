@@ -1,0 +1,81 @@
+// 기본 URL Get
+GET http://localhost:3000/ HTTP/1.1
+###
+
+// ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇Users관련
+//회원가입 -완료!
+POST http://localhost:3000/api/signup HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "fortest336@naver.com",
+  "name": "테스트용",
+  "password": "test123",
+  "confirmPassword": "test123"
+}
+
+###
+//로그인 -완료
+POST http://localhost:3000/api/login  HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "fortest456@naver.com",
+  "password": "test123"
+}
+
+###
+//비밀번호 수정 -완료
+PUT http://localhost:3000/api/myinfo HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "fortest456@naver.com",
+  "password": "test123",
+  "newPassword": "test123"
+}
+###
+//내 정보 조회 -완료
+GET  http://localhost:3000/api/myinfo HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+###
+//회원정보 삭제 - 완료
+DELETE  http://localhost:3000/api/myinfo HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "fortest456@naver.com",
+  "password": "test123"
+}
+
+###
+//로그아웃 -완료
+POST  http://localhost:3000/api/logout HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "fortest456@naver.com",
+  "password": "test123"
+}
+
+//⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ Products 관련
+###
+//상품 등록 - 완료
+POST  http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "title": "유자",
+  "content": "상큼하고 맛있습니다"
+}
+
+###
+//상품 전체 조회 - 
+GET  http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+###
+//상품 상세 조회
+GET  http://localhost:3000/api/products/18 HTTP/1.1
+Content-Type: application/json; charset=utf-8
